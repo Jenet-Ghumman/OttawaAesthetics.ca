@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Ottawa Aesthetics</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e3f2fd;
+            color: #333;
+        }
+        .header {
+            background-color: #1a237e;
+            color: #fff;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header .logo img {
+            height: 50px;
+        }
+        .header nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #1a237e;
+        }
+        .about-text {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            color: #555;
+        }
+        .doctors-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .doctor-card {
+            background-color: #90caf9;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 280px;
+            text-align: center;
+            transition: 0.3s;
+            margin-bottom: 20px;
+        }
+        .doctor-card:hover {
+            background-color: #64b5f6;
+            transform: scale(1.03);
+        }
+        .doctor-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        .doctor-card h3 {
+            margin: 0;
+            color: #1a237e;
+        }
+        .doctor-card p {
+            font-size: 14px;
+            color: #444;
+        }
+        .footer {
+            background-color: #1a237e;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .footer a {
+            color: #90caf9;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="logo.png" alt="Ottawa Aesthetics">
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="treatments.html">Treatments</a>
+            <a href="book.html">Book Now</a>
+            <a href="location.html">Our Location</a>
+        </nav>
+    </div>
+    <div class="container">
+        <h1>About Ottawa Aesthetics</h1>
+        <p class="about-text">Ottawa Aesthetics has been serving Ottawa and the surrounding areas for over 20 years. Our experienced team of professionals is dedicated to providing the highest level of care in medical aesthetics. We specialize in Botox, dermal fillers, and advanced skincare treatments to help you achieve your beauty goals.</p>
+
+        <h2>Meet Our Doctors</h2>
+        <div class="doctors-container">
+            <div class="doctor-card">
+                <img src="d1.jpg" alt="Dr. Emily Thompson">
+                <h3>Dr. Emily Thompson</h3>
+                <p>Dr. Emily Thompson is a board-certified dermatologist with over 15 years of experience in cosmetic dermatology. She specializes in Botox, dermal fillers, and laser treatments.</p>
+            </div>
+            <div class="doctor-card">
+                <img src="d2.jpg" alt="Dr. Michael Patel">
+                <h3>Dr. Michael Patel</h3>
+                <p>With a passion for aesthetic medicine, Dr. Michael Patel has been a leader in non-surgical facial rejuvenation for over a decade. He focuses on personalized treatment plans for natural-looking results.</p>
+            </div>
+            <div class="doctor-card">
+                <img src="d3.jpg" alt="Dr. Robert Anderson">
+                <h3>Dr. Robert Anderson</h3>
+                <p>Aesthetic specialist Dr. Robert Anderson has over 20 years of experience in the field. His expertise includes advanced dermal fillers, PRP therapy, and anti-aging solutions.</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>Contact Us: <a href="mailto:info@ottawaaesthetics.com">info@ottawaaesthetics.com</a> | Phone: (123) 456-7890</p>
+        <p>&copy; 2025 Ottawa Aesthetics. All Rights Reserved.</p>
+    </div>
+</body>
+</html>

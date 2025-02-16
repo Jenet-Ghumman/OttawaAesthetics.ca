@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book an Appointment</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e3f2fd;
+            color: #333;
+        }
+        .header {
+            background-color: #1a237e;
+            color: #fff;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header .logo img {
+            height: 50px;
+        }
+        .header nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        select, input {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .submit-button {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            background-color: #1a237e;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .submit-button:hover {
+            background-color: #0d47a1;
+        }
+    </style>
+   <script>
+    function bookAppointment() {
+        const practitioner = document.getElementById('practitioner').value;
+        const service = document.getElementById('service').value;
+        const date = document.getElementById('date').value;
+        const time = document.getElementById('time').value;
+
+        if (practitioner && service && date && time) {
+            // Store values in sessionStorage
+            sessionStorage.setItem('practitioner', practitioner);
+            sessionStorage.setItem('service', service);
+            sessionStorage.setItem('date', date);
+            sessionStorage.setItem('time', time);
+
+            // Redirect to client-info.html
+            window.location.href = "client-info.html";
+        } else {
+            alert('Please fill out all fields before booking.');
+        }
+    }
+</script>
+
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="logo.png" alt="Ottawa Aesthetics">
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="treatments.html">Treatments</a>
+            <a href="book.html">Book Now</a>
+            <a href="location.html">Our Location</a>
+        </nav>
+    </div>
+    <div class="container">
+        <div class="form-group">
+            <label for="practitioner">Select Practitioner</label>
+            <select id="practitioner">
+                <option value="dr-thompson">Dr. Thompson</option>
+                <option value="dr-patel">Dr. Patel</option>
+                <option value="dr-anderson">Dr. Anderson</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="service">Select Service</label>
+            <select id="service">
+                <option value="botox">Botox</option>
+                <option value="dermal-fillers">Dermal Fillers</option>
+                <option value="sculptra">Sculptra</option>
+		<option value="radiesse">Radiesse</option>
+                <option value="NCTF Boost">NCTF Boost</option>
+                <option value="aerolase Neo Laser">Aerolase Neo Laser</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="date">Select Date</label>
+            <input type="date" id="date">
+        </div>
+        <div class="form-group">
+            <label for="time">Select Time</label>
+            <select id="time">
+                <option value="9:00 AM">9:00 AM</option>
+                <option value="10:00 AM">10:00 AM</option>
+                <option value="11:00 AM">11:00 AM</option>
+                <option value="12:00 PM">12:00 PM</option>
+                <option value="1:00 PM">1:00 PM</option>
+            </select>
+        </div>
+        <button class="submit-button" onclick="bookAppointment()">Book Appointment</button>
+    </div>
+</body>
+</html>

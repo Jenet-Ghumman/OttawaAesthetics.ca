@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ottawa Aesthetics</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e3f2fd;
+            color: #333;
+        }
+        .header {
+            background-color: #1a237e;
+            color: #fff;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header .logo img {
+            height: 50px;
+        }
+        .header nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+        }
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 40px 20px;
+            background-color: #90caf9;
+        }
+        .hero .text {
+            max-width: 50%;
+        }
+        .hero .text h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .hero .text p {
+            font-size: 16px;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        .hero .text button {
+            padding: 10px 20px;
+            font-size: 14px;
+            border: none;
+            background-color: #1a237e;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .hero img {
+            max-width: 40%;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .section h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #1a237e;
+        }
+        .section .content {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .footer {
+            background-color: #1a237e;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="logo.png" alt="Ottawa Aesthetics">
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="treatments.html">Treatments</a>
+            <a href="book.html">Book Now</a>
+            <a href="location.html">Our Location</a>
+        </nav>
+    </div>
+    <div class="hero">
+        <div class="text">
+            <h1>Welcome to Ottawa Aesthetics</h1>
+            <p>We specialize in neuromodulators (Botox), dermal fillers, Sculptra, Radiesse, and other advanced medical aesthetic treatments.</p>
+            <button onclick="window.location.href='book.html'">Book Now</button>
+        </div>
+        <img src="indexpic.jpg" alt="Treatment Room">
+    </div>
+    <div class="section" id="treatments">
+        <h2>Our Treatments</h2>
+        <div class="content">
+            <p>Explore our wide range of treatments, including Botox, dermal fillers, and more. Enhance your natural beauty with expert care.</p>
+            <button onclick="window.location.href='treatments.html'">View Treatments</button>
+        </div>
+    </div>
+    <div class="section" id="book-now">
+        <h2>Book Your Appointment</h2>
+        <div class="content">
+            <p>Schedule your visit today and experience the best in medical aesthetics.</p>
+            <button onclick="window.location.href='book.html'">Book Now</button>
+        </div>
+    </div>
+    <div class="section" id="location">
+        <h2>Our Location</h2>
+        <div class="content">
+            <p>Visit us at our conveniently located clinic. Address: 123 Beauty Street, Ottawa, ON</p>
+            <button onclick="window.location.href='location.html'">View Location</button>
+        </div>
+    </div>
+    <div class="footer">
+        <p>Contact Us: <a href="mailto:info@ottawaaesthetics.com">info@ottawaaesthetics.com</a> | Phone: (123) 456-7890</p>
+        <p>&copy; 2025 Ottawa Aesthetics. All Rights Reserved.</p>
+    </div>
+</body>
+</html>

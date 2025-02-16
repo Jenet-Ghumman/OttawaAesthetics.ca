@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Info</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e3f2fd;
+            color: #333;
+        }
+        .header {
+            background-color: #1a237e;
+            color: #fff;
+            padding: 15px 20px;
+            text-align: center;
+            font-size: 18px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .submit-button {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            background-color: #1a237e;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .submit-button:hover {
+            background-color: #0d47a1;
+        }
+    </style>
+<script>
+    function submitClientInfo() {
+        const firstName = document.getElementById('first-name').value;
+        const lastName = document.getElementById('last-name').value;
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
+
+        // Retrieve stored data from sessionStorage
+        const practitioner = sessionStorage.getItem('practitioner') || 'Not Provided';
+        const service = sessionStorage.getItem('service') || 'Not Provided';
+        const date = sessionStorage.getItem('date') || 'Not Provided';
+        const time = sessionStorage.getItem('time') || 'Not Provided';
+
+        // Construct URL with stored data
+        const url = `confirmation.html?practitioner=${encodeURIComponent(practitioner)}&service=${encodeURIComponent(service)}&date=${encodeURIComponent(date)}&time=${encodeURIComponent(time)}&first-name=${encodeURIComponent(firstName)}&last-name=${encodeURIComponent(lastName)}&email=${encodeURIComponent(email)}&phone=${encodeURIComponent(phone)}`;
+        
+        window.location.href = url;
+    }
+
+    window.onload = function () {
+        // Display stored values
+        document.getElementById('practitioner').textContent = sessionStorage.getItem('practitioner') || 'Not Provided';
+        document.getElementById('service').textContent = sessionStorage.getItem('service') || 'Not Provided';
+        document.getElementById('date').textContent = sessionStorage.getItem('date') || 'Not Provided';
+        document.getElementById('time').textContent = sessionStorage.getItem('time') || 'Not Provided';
+    };
+</script>
+
+</head>
+<body>
+    <div class="header">Client Information</div>
+    <div class="container">
+        <h3>Appointment Details</h3>
+        <p><strong>👨‍⚕️ Practitioner:</strong> <span id="practitioner"></span></p>
+        <p><strong>💆 Service:</strong> <span id="service"></span></p>
+        <p><strong>📅 Date:</strong> <span id="date"></span></p>
+        <p><strong>⏰ Time:</strong> <span id="time"></span></p>
+
+        <h3>Enter Your Information</h3>
+        <div class="form-group">
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" required>
+        </div>
+        <div class="form-group">
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" required>
+        </div>
+        <button class="submit-button" onclick="submitClientInfo()">Confirm Appointment</button>
+    </div>
+</body>
+</html>
